@@ -5,7 +5,7 @@ const { OAuth2Client } = require('google-auth-library');
 const cors = require('cors');
 const JWT_SEC = "my_jwt_sec";
 const connection = require('./db/config');
-const PORT = process.env.PORT || 8895;
+const PORT = process.env.PORT || 8080;
 
 // importing routes
 const loginRouter = require("./routes/login");
