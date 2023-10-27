@@ -106,4 +106,15 @@ app.post('/signup', (req, res) => {
 
 
 
+app.get('/productlist', (req, res) => {
+  const selectQuery = 'SELECT * FROM products_list';
+  connection.query(selectQuery, (err, results) => {
+    if (err) {
+      console.error('Error executing query: ' + err);
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+    return res.json(results);
+  });
+});
+
 app.listen(PORT);
