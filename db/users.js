@@ -10,3 +10,6 @@ connection.query(insertQuery, values, (err, results) => {
     }
     console.log('Data inserted successfully');
   });
+   
+
+  
